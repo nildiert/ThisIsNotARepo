@@ -13,11 +13,16 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-[#23272e] text-white">
+  <%= render "shared/navbar" %>
+    <div class="container mx-auto px-5 flex min-h-[calc(100vh-8.25rem)] my-[20px]">
+      <%= yield %>
+    </div>
+  <%= render "shared/footer" %>
   </body>
 </html>
