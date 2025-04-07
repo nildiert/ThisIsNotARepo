@@ -45,7 +45,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rails_live_reload"
-  
+
 end
 
 group :development do
@@ -62,3 +62,5 @@ end
 gem "tailwindcss-ruby", "~> 4.0"
 
 gem "tailwindcss-rails", "~> 4.2"
+
+gem 'acts_as_tenant'
