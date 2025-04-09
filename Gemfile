@@ -45,6 +45,10 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rails_live_reload"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56810cb56e752235801c94a9b77312d303b537a0
 end
 
 group :development do
