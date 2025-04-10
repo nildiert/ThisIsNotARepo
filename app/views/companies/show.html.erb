@@ -1,0 +1,9 @@
+<div class="flex flex-col gap-4">
+    <h1 class="font-bold text-[50px]"><%= @company.name %></h1>
+    <div>
+        <p><span class="font-bold">Subdominio: </span><%= @company.subdomain %></p>
+    </div>
+    <%= link_to "editar", edit_company_path(@company), class: "btn" %>
+    <%= link_to "eliminar", company_path(@company),data: { turbo_method: :delete, turbo_confirm: "¿Estas seguro?"}, class: "btn" %>
+    <%= link_to "volver", "/companies", class:"btn" %>
+</div>

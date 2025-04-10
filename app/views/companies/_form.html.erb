@@ -1,0 +1,32 @@
+    <%= form_with model: @company do |form| %>
+<div class="flex flex-col items-center w-[300px]">
+        <div class="mb-4 flex justify-between w-full">
+            <%= form.label :name %>
+            <%= form.text_field :name, class: "border border-gray-300 rounded p-2" %>
+        </div>
+        <ul class="mb-4 list-disc">
+            <% @company.errors.full_messages_for(:name).each do |message| %>
+                <li class="text-red-500">
+                    <%= message %>
+                </li>
+            <% end %>
+        </ul>
+
+        <div class="mb-4 flex justify-between w-full">
+            <%= form.label :subdomain %>
+            <%= form.text_field :subdomain, class: "border border-gray-300 rounded p-2" %>
+        </div>
+        <ul class="mb-4 list-disc">
+            <% @company.errors.full_messages_for(:subdomain).each do |message| %>
+                <li class="text-red-500">
+                    <%= message %>
+                </li>
+            <% end %>
+        </ul>
+        <div class="mb-4">
+            <%= form.submit "Crear compañia", class: "btn text-center" %>
+        </div>
+</div>
+    <% end %>
+    <%= link_to "Volver", "/companies", class: "btn text-center" %>
+
