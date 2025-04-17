@@ -29,3 +29,16 @@
 
 en:
   hello: "Hello world"
+  edit: "Edit"
+  back: "Back"
+  create: "Create"
+  update: "Update"
+  delete: "Delete"
+  create-company: "Create company"
+  companies: "Companies"
+  company: "Company"
+  subdomain: "Subdomain"
+  go-to-url: "Go to URL"
+  home: "Home"
+  about: "About"
+  view-companies: "View companies"

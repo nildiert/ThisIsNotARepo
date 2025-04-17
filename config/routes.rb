@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     root "home#index", as: :tenant_root
   end
 
+  scope "/:locale" do
+  resources :books
+end
+
   # Rutas generales (por si se accede sin subdominio)
   root "home#index"
 

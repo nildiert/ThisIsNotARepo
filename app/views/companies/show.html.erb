@@ -3,7 +3,7 @@
     <div>
         <p><span class="font-bold">Subdominio: </span><%= @company.subdomain %></p>
     </div>
-    <%= link_to "editar", edit_company_path(@company), class: "btn" %>
-    <%= link_to "eliminar", company_path(@company),data: { turbo_method: :delete, turbo_confirm: "¿Estas seguro?"}, class: "btn" %>
-    <%= link_to "volver", "/companies", class:"btn" %>
+    <%= link_to t("edit"), edit_company_path(@company), class: "btn" %>
+    <%= link_to t("delete"), company_path(@company),data: { turbo_method: :delete, turbo_confirm: "¿Estas seguro?"}, class: "btn" %>
+    <%= link_to t("back"), "/companies", class:"btn" %>
 </div>

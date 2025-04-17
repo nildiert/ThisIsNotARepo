@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-4 w-full">
-  <h1 class="font-bold text-4xl">Companies</h1>
-  <%= link_to "Crear compañia", "/companies/new", class: "btn w-[250px]" %>
+  <h1 class="font-bold text-4xl"><%= t("companies") %></h1>
+  <%= link_to t("create-company"), "/companies/new", class: "btn w-[250px]" %>
   <div class="w-[900px]">
     <ul>
       <% @companies.each do |company| %>
@@ -9,10 +9,10 @@
             <%= link_to company.name, company_path(company), class:"hover:text-[#193cb8] font-bold" %>
           </span>
           <div class="flex gap-4 justify-between w-full">
-            <span>Subdominio:</span>
+            <span><%= t("subdomain") %></span>
             <span> <%= company.subdomain %></span>
             <span>
-              <%= link_to "ir a la URL", "http://#{company.subdomain}.localhost:3000", class:"hover:text-[#193cb8] font-bold" %>
+              <%= link_to t("go-to-url"), "http://#{company.subdomain}.localhost:3000", class:"hover:text-[#193cb8] font-bold" %>
             </span>
           </div>
         </li>
