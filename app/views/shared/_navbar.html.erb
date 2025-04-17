@@ -1,8 +1,14 @@
 <!-- app/views/shared/_navbar.html.erb -->
 <nav class="bg-[#36393f] shadow p-4 flex items-center justify-between">
-  <div class="text-xl font-bold">This is Not A Repo</div>
-  <div>
-    <a href="/" class="text-blue-500 hover:underline">Inicio</a>
-    <a href="/about" class="ml-4 text-blue-500 hover:underline">Acerca</a>
+  <div class="text-xl font-bold"><%= t("this-is-not-a-repo") %></div>
+  <div class="flex items-center gap-4">
+    <a href="/" class="text-blue-500 hover:underline"><%= t("home") %></a>
+    <a href="/about" class="ml-4 text-blue-500 hover:underline"><%= t("about") %></a>
+    <div>
+      <select onchange="window.location.href='?locale=' + this.value" class="border rounded p-2">
+        <option value="en" <%= 'selected' if I18n.locale == :en %>>English</option>
+        <option value="es" <%= 'selected' if I18n.locale == :es %>>Español</option>
+      </select>
+    </div>
   </div>
 </nav>
