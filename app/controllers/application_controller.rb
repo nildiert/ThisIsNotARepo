@@ -17,11 +17,13 @@ class ApplicationController < ActionController::Base
   end
 
   def set_company_tenant
-    company = Company.where(subdomain: request.subdomain).first
-    if company
-    set_current_tenant(company)
-    else
-      render plain: "Tenant no encontrado", status: :not_found
+    if request.subdomain.present? && request.subdomain != 'www'
+      company = Company.where(subdomain: request.subdomain).first
+      if company
+        set_current_tenant(company)
+      else
+        redirect_to root_url(subdomain: nil), alert: "Tenant no encontrado"
+      end
     end
   end
 end

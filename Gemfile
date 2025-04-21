@@ -45,6 +45,8 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rails_live_reload"
+
+  gem 'dotenv-rails'
 end
 
 group :development do
