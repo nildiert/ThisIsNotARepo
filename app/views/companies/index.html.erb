@@ -1,0 +1,22 @@
+<div class="flex flex-col gap-4 w-full">
+  <h1 class="font-bold text-4xl"><%= I18n.t("companies") %></h1>
+  <%= link_to I18n.t("create-company"), "/companies/new", class: "btn w-[250px]" %>
+  <div class="w-[900px]">
+    <ul>
+      <% @companies.each do |company| %>
+        <li class="flex gap-4 justify-between w-full">
+          <span class="w-[200px]">
+            <%= link_to company.name, company_path(company), class:"hover:text-[#193cb8] font-bold" %>
+          </span>
+          <div class="flex gap-4 justify-between w-full">
+            <span><%= I18n.t("subdomain") %></span>
+            <span> <%= company.subdomain %></span>
+            <span>
+              <%= link_to I18n.t("go-to-url"), "http://#{company.subdomain}.localhost:3000", class:"hover:text-[#193cb8] font-bold" %>
+            </span>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
