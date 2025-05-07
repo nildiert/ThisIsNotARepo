@@ -4,6 +4,5 @@
 
 
 .btn {
-    @apply bg-blue-800 py-2.5 px-5 mt-[30px] rounded-[10px] text-white font-bold hover:bg-blue-950 transition-colors duration-300;
-    
+    @apply bg-blue-800 py-2.5 px-5 mt-[30px] rounded-[10px] text-white font-bold hover:bg-blue-950 transition-colors duration-300 text-center;
 }

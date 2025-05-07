@@ -10,5 +10,25 @@
         <option value="es" <%= 'selected' if I18n.locale == :es %>>Español</option>
       </select>
     </div>
+    <% if user_signed_in? %>
+      <div class="relative">
+        <div class="flex items-center cursor-pointer" onclick="toggleDropdown()">
+          <img src="<%= 'default-profile.png' %>" alt="Profile" class="w-8 h-8 rounded-full">
+        </div>
+        <div onmouseleave="toggleDropdown()" id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg hidden">
+          <a href="/users/edit" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><%= I18n.t("update_password") %></a>
+          <a href="<%= destroy_user_session_path %>" data-turbo-method="delete" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><%= I18n.t("logout") %></a>
+        </div>
+      </div>
+      <script>
+        function toggleDropdown() {
+          const dropdown = document.getElementById('dropdown-menu');
+          dropdown.classList.toggle('hidden');
+        }
+      </script>
+    <% else %>
+      <%= link_to I18n.t("login"), new_user_session_path, class: "btn mt-0!" %>
+      <%= link_to I18n.t("register"), new_user_registration_path, class: "btn mt-0!" %>
+    <% end %>
   </div>
 </nav>

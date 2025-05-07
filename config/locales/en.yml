@@ -43,3 +43,10 @@ en:
   about: "About"
   view-companies: "View companies"
   this-is-not-a-repo: "This is not a repo"
+  update_password: "Update password"
+  logout: "Logout"
+  login: "Login"
+  password: "Password"
+  email: "Email"
+  register: "Register"
+

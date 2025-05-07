@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users 
   # Rutas para tenant con subdominio
   constraints subdomain: /.+/ do
     root "home#index", as: :tenant_root
