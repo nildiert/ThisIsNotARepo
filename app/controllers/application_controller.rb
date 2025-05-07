@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   set_current_tenant_through_filter # Required to opt into this behavior
   before_action :set_company_tenant
   before_action :set_locale
+  before_action :authenticate_user!
 
 
   private

@@ -65,3 +65,5 @@ gem "tailwindcss-ruby", "~> 4.0"
 gem "tailwindcss-rails", "~> 4.2"
 
 gem "activerecord-multi-tenant"
+
+gem "devise", "~> 4.9"
