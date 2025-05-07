@@ -48,3 +48,5 @@ en:
   login: "Login"
   password: "Password"
   email: "Email"
+  register: "Register"
+
